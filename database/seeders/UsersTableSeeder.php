@@ -20,8 +20,8 @@ class UsersTableSeeder extends Seeder
             'email' => 'admin@johndoe.com',
             'email_verified_at' => Carbon::now(),
             'password' => Hash::make('password123'),
-            'active' => 'Y',
-            'isadmin' => 'N',
+            'active' => 1,
+            'isadmin' => 1,
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);

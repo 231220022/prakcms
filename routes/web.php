@@ -67,5 +67,5 @@ Route::middleware('auth')->group(function () {
     Route::post('/auth/home/simpan',[HomeController:: class,'simpanhome'])->name('simpanhome');
     Route::get('/auth/home/edit/{id}',[HomeController:: class,'editHome'])->name('editHome');
     Route::post('/auth/home/update/{id}',[HomeController:: class,'updateHome'])->name('updateHome');
-    Route::post('/auth/home/delete/{id}',[HomeController:: class,'deleteHome'])->name('deleteHome');
+    Route::delete('/auth/home/delete/{id}',[HomeController:: class,'deleteHome'])->name('deleteHome');
 });

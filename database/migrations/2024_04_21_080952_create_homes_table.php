@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('salam');
             $table->text(column:'konten');
             $table->boolean('active');
+            $table->string('image_path')->nullable();
             $table->timestamps();
         });
     }

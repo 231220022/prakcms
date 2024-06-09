@@ -34,8 +34,23 @@ class HomeController extends Controller
 
     public function simpanhome(Request $request)
     {
-        $this->home->saveData($this->request->all());
-        return redirect()->route('daftarhome');
+        // $this->home->saveData($this->request->all());
+        $request->validate([
+            'salam' => 'required',
+            'konten' => 'required',
+            'active' => 'required',
+            'image_path' => 'nullable|image|max:2048'
+        ]);
+        $home = new Home();
+        $home->salam = $request->salam;
+        $home->konten = $request->konten;
+        $home->active = $request->active;
+        if ($request->hasFile('image_path')){
+            $home->image_path = $request->file('image_path')->store('images','public');
+        }
+
+        $home->save();
+        return redirect()->route('layout.admin.home');
     }
 
     public function editHome($id)

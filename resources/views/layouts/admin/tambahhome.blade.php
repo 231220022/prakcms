@@ -36,6 +36,10 @@
                         <option value=1>Active</option>
                         <option value=0 selected>Disabled</option>
                     </select>   
+                </div>
+                <div class="form-group">
+                    <label for="image_path" class="mb-2">Photo</label>
+                    <input type="file" class="form-control mb-2" id="image_path" name="image_path" placeholder="Masukkan salam">
                 </div>              
 
                 <button type="submit" class="btn btn-primary">Simpan</button>
