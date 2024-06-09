@@ -44,7 +44,7 @@
                     </select>
                     <div class="form-group">
                       <label for="image_path" class="mb-2">Photo</label>
-                    <input type="file" class="form-control mb-2" id="image_path" name="image_path" placeholder="Masukkan salam">
+                    <input type="file" class="form-control mb-2" id="image_path" name="image_path">
                 </div>  
                 </div>
                 
